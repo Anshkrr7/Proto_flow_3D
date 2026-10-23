@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172b24">
+  <meta name="description" content="Shop 3D Printed Parts — clothing and fashion essentials. Order directly on WhatsApp.">
+  <title>3D Printed Parts — Shop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">Small details. Big style. <span>Order directly on WhatsApp</span></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="3D Printed Parts home">
+      <span class="brand-mark">3D</span>
+      <span class="brand-copy"><strong>3D PRINTED PARTS</strong><small>STYLE • ACCESSORIES • MORE</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-toggle" id="cart-toggle" aria-label="Open cart">Cart <span id="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">THE EVERYDAY EDIT</p>
+        <h1>Find your<br><em>next favourite.</em></h1>
+        <p class="hero-description">A curated collection of fashion essentials and accessories. Browse the products, add your picks to the cart, and send your order straight to us on WhatsApp.</p>
+        <a class="button button-light" href="#shop">Explore the collection <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-circle circle-one"></div>
+        <div class="art-circle circle-two"></div>
+        <div class="art-label">MADE FOR<br>YOUR EVERYDAY</div>
+        <div class="art-product">3D<span>+</span></div>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">OUR COLLECTION</p>
+          <h2>Shop the edit</h2>
+        </div>
+        <label class="search-wrap">
+          <span class="sr-only">Search products</span>
+          <input id="search" type="search" placeholder="Search products…" autocomplete="off">
+          <span aria-hidden="true">⌕</span>
+        </label>
+      </div>
+      <div class="filters" id="filters" aria-label="Filter products"></div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>No products match your search. Try another term.</p>
+    </section>
+
+    <section class="order-banner">
+      <div>
+        <p class="eyebrow">A SIMPLE WAY TO SHOP</p>
+        <h2>Your cart, your choice.</h2>
+        <p>Choose what you love, then send your order on WhatsApp. We’ll confirm availability, delivery and payment details with you.</p>
+      </div>
+      <a href="#shop" class="button button-dark">Browse products <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="about-section" id="about">
+      <p class="eyebrow">ABOUT THE STORE</p>
+      <h2>Good finds.<br><em>Easy ordering.</em></h2>
+      <p>3D Printed Parts is your online storefront. This starter site uses sample fashion products so you can preview the layout. Replace the sample items with your real products before sharing the website.</p>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">3D</span><span class="brand-copy"><strong>3D PRINTED PARTS</strong><small>STYLE • ACCESSORIES • MORE</small></span></a>
+    <p>Questions or custom requests? Message us on WhatsApp when checkout is configured.</p>
+    <div class="footer-bottom"><span>© <span id="year"></span> 3D Printed Parts</span><span>Made for mobile-first shopping</span></div>
+  </footer>
+
+  <div class="cart-backdrop" id="cart-backdrop" hidden></div>
+  <aside class="cart-panel" id="cart-panel" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-header">
+      <div><p class="eyebrow">YOUR SELECTION</p><h2>Your cart</h2></div>
+      <button class="icon-button" id="close-cart" aria-label="Close cart">×</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty">Your cart is empty. Add something you like.</div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Subtotal</span><strong id="cart-subtotal">₹0</strong></div>
+      <p class="cart-note">Shipping and final availability are confirmed with you on WhatsApp.</p>
+      <button class="button button-dark checkout-button" id="checkout-button">Order on WhatsApp <span aria-hidden="true">↗</span></button>
+      <button class="text-button" id="clear-cart">Clear cart</button>
+    </div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
